@@ -1,6 +1,8 @@
 require 'BankAccount'
 describe BankAccount do
   let(:bank_account) { subject }
+  let(:deposit_amount) { 50 }
+  let(:withdraw_amount) { 25.50 }
 
   describe 'initialize' do
     it 'initializes with an 0 balance' do
@@ -10,14 +12,14 @@ describe BankAccount do
 
   describe '#deposit' do
     it 'increases balance by deposited amount' do
-      expect { bank_account.deposit(50) }.to change{bank_account.balance}.by 50
+      expect { bank_account.deposit(deposit_amount) }.to change{bank_account.balance}.by deposit_amount
     end
   end
 
   describe '#withdraw' do
     it 'reduces the balance by given amount' do
-      bank_account.deposit(50)
-      expect { bank_account.withdraw(26.50) }.to change{bank_account.balance}.by -(26.50)
+      bank_account.deposit(deposit_amount)
+      expect { bank_account.withdraw(withdraw_amount) }.to change{bank_account.balance}.by -(withdraw_amount)
     end
   end
 
