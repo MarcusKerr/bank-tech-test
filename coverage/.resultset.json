@@ -1,0 +1,36 @@
+{
+  "RSpec": {
+    "coverage": {
+      "/Users/marcus/Projects/Makers Academy/Week10/bank-tech-test/spec/bank_account_spec.rb": [
+        1,
+        1,
+        4,
+        null,
+        1,
+        1,
+        1,
+        null,
+        null,
+        null,
+        1,
+        1,
+        1,
+        null,
+        null,
+        null,
+        1,
+        1,
+        1,
+        null,
+        null,
+        null
+      ],
+      "/Users/marcus/Projects/Makers Academy/Week10/bank-tech-test/lib/BankAccount.rb": [
+        1,
+        null,
+        null
+      ]
+    },
+    "timestamp": 1536577469
+  }
+}
