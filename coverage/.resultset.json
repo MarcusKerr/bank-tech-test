@@ -14,7 +14,7 @@
         null,
         1,
         1,
-        1,
+        4,
         null,
         null,
         null,
@@ -28,9 +28,18 @@
       "/Users/marcus/Projects/Makers Academy/Week10/bank-tech-test/lib/BankAccount.rb": [
         1,
         null,
+        1,
+        null,
+        1,
+        3,
+        null,
+        null,
+        1,
+        1,
+        null,
         null
       ]
     },
-    "timestamp": 1536577469
+    "timestamp": 1536578227
   }
 }

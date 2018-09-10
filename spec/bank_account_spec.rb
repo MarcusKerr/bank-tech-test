@@ -7,16 +7,16 @@ describe BankAccount do
       expect(bank_account.balance).to eq 0
     end
   end
-  
+
   describe '#deposit' do
     it 'increases balance by deposited amount' do
-      expect { bank_account.deposit(50) }.to change(bank_account.balance). by 50 
-    end 
-  end 
+      expect { bank_account.deposit(50) }.to change{bank_account.balance}.by 50
+    end
+  end
 
   describe '#balance' do
     it 'returns the balance' do
       expect(bank_account.balance).to eq 0
-    end 
-  end 
+    end
+  end
 end
