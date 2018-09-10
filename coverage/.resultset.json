@@ -9,6 +9,7 @@
         2,
         null,
         2,
+        1,
         null,
         1,
         1,
@@ -19,6 +20,10 @@
         1,
         1,
         4,
+        null,
+        null,
+        1,
+        1,
         null,
         null,
         null,
@@ -46,10 +51,10 @@
       "/Users/marcus/Projects/Makers Academy/Week10/bank-tech-test/lib/BankAccount.rb": [
         1,
         1,
-        null,
         1,
         null,
         1,
+        5,
         5,
         null,
         null,
@@ -62,15 +67,24 @@
         null,
         null,
         1,
-        1,
         null,
         null
       ],
       "/Users/marcus/Projects/Makers Academy/Week10/bank-tech-test/lib/Statement.rb": [
         1,
+        null,
+        null
+      ],
+      "/Users/marcus/Projects/Makers Academy/Week10/bank-tech-test/spec/statement_spec.rb": [
+        1,
+        null,
+        1,
+        1,
+        1,
+        null,
         null
       ]
     },
-    "timestamp": 1536590392
+    "timestamp": 1536591337
   }
 }

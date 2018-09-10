@@ -1,10 +1,10 @@
 require_relative 'Statement'
 class BankAccount
-
   attr_reader :balance
 
   def initialize
     @balance = 0
+    @transactions = []
   end
 
   def deposit(amount)
@@ -16,6 +16,5 @@ class BankAccount
   end
 
   def print_statement
-    Statement.new.print
   end
 end

@@ -5,6 +5,7 @@ describe BankAccount do
   let(:withdraw_amount) { 25.50 }
 
   let(:statement) { double :statement }
+  let(:tx1) { double :transaction_instance }
 
   describe 'initialize' do
     it 'initializes with an 0 balance' do
@@ -14,15 +15,23 @@ describe BankAccount do
 
   describe '#deposit' do
     it 'increases balance by deposited amount' do
-      expect { bank_account.deposit(deposit_amount) }.to change{bank_account.balance}.by deposit_amount
+      expect { bank_account.deposit(deposit_amount) }.to change { bank_account.balance }.by deposit_amount
     end
+
+    it 'adds a transaction to the transaction array' do
+      expect(bank_account.transactions).to include(tx1)
+    end 
   end
 
   describe '#withdraw' do
     it 'reduces the balance by given amount' do
       bank_account.deposit(deposit_amount)
-      expect { bank_account.withdraw(withdraw_amount) }.to change{bank_account.balance}.by -(withdraw_amount)
-    end 
+      expect { bank_account.withdraw(withdraw_amount) }.to change { bank_account.balance }.by -withdraw_amount
+    end
+
+    it 'adds a transaction to the transaction array' do
+      expect(bank_account.transactions).to include(tx1)
+    end
   end
 
   describe '#balance' do
