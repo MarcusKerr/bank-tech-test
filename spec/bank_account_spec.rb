@@ -5,7 +5,8 @@ describe BankAccount do
   let(:withdraw_amount) { 25.50 }
 
   let(:statement) { double :statement }
-  let(:tx1) { double :transaction_instance }
+  let(:transaction_class) { double :transaction, new: transaction }
+  let(:transaction) { double :transaction_instamce }
 
   describe 'initialize' do
     it 'initializes with an 0 balance' do
@@ -19,7 +20,7 @@ describe BankAccount do
     end
 
     it 'adds a transaction to the transaction array' do
-      expect(bank_account.transactions).to include(tx1)
+      expect(bank_account.transactions).to include(transaction)
     end 
   end
 
@@ -30,7 +31,7 @@ describe BankAccount do
     end
 
     it 'adds a transaction to the transaction array' do
-      expect(bank_account.transactions).to include(tx1)
+      expect(bank_account.transactions).to include(transaction)
     end
   end
 
