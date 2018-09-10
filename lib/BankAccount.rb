@@ -1,3 +1,4 @@
+require_relative 'Statement'
 class BankAccount
 
   attr_reader :balance
@@ -12,5 +13,9 @@ class BankAccount
 
   def withdraw(amount)
     @balance -= amount
+  end
+
+  def print_statement
+    Statement.new.print
   end
 end

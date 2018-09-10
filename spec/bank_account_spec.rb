@@ -22,7 +22,7 @@ describe BankAccount do
     it 'reduces the balance by given amount' do
       bank_account.deposit(deposit_amount)
       expect { bank_account.withdraw(withdraw_amount) }.to change{bank_account.balance}.by -(withdraw_amount)
-    end
+    end 
   end
 
   describe '#balance' do
