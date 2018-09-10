@@ -9,11 +9,12 @@ class BankAccount
   end
 
   def deposit(amount)
+    @transactions << (Transaction.new(amount, @balance, 'debit'))
     @balance += amount
-    @transactions << (Transaction.new(amount))
   end
 
   def withdraw(amount)
+    @transactions << (Transaction.new(amount, @balance, 'credit'))
     @balance -= amount
   end
 

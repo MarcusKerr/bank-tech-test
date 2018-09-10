@@ -1,39 +1,24 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/marcus/Projects/Makers Academy/Week10/bank-tech-test/spec/bank_account_spec.rb": [
-        1,
-        1,
-        8,
-        3,
+      "/Users/marcus/Projects/Makers Academy/Week10/bank-tech-test/spec/transaction_spec.rb": [
         1,
         null,
-        2,
         1,
-        3,
-        null,
-        1,
-        1,
-        1,
+        5,
         null,
         null,
         null,
-        1,
-        1,
-        3,
-        null,
-        null,
-        1,
-        1,
         null,
         null,
         null,
         1,
         1,
         1,
-        0,
         null,
         null,
+        null,
+        1,
         1,
         1,
         null,
@@ -48,54 +33,25 @@
         1,
         1,
         1,
-        1,
         null,
-        null,
-        null
-      ],
-      "/Users/marcus/Projects/Makers Academy/Week10/bank-tech-test/lib/BankAccount.rb": [
-        1,
-        1,
-        1,
-        1,
-        null,
-        1,
-        7,
-        7,
-        null,
-        null,
-        1,
-        2,
-        2,
-        null,
-        null,
-        1,
-        0,
-        null,
-        null,
-        1,
         null,
         null
       ],
       "/Users/marcus/Projects/Makers Academy/Week10/bank-tech-test/lib/Transaction.rb": [
         1,
-        null
-      ],
-      "/Users/marcus/Projects/Makers Academy/Week10/bank-tech-test/lib/Statement.rb": [
-        1,
-        null,
-        null
-      ],
-      "/Users/marcus/Projects/Makers Academy/Week10/bank-tech-test/spec/statement_spec.rb": [
         1,
         null,
         1,
+        null,
         1,
-        1,
+        4,
+        4,
+        4,
+        4,
         null,
         null
       ]
     },
-    "timestamp": 1536592311
+    "timestamp": 1536594357
   }
 }
