@@ -81,6 +81,12 @@
         null,
         1,
         null,
+        null,
+        1,
+        5,
+        null,
+        null,
+        1,
         null
       ],
       "/Users/marcus/Projects/Makers Academy/Week10/bank-tech-test/lib/Transaction.rb": [
@@ -147,6 +153,6 @@
         null
       ]
     },
-    "timestamp": 1536658361
+    "timestamp": 1536658619
   }
 }

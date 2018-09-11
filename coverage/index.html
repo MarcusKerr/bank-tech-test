@@ -14,7 +14,7 @@
       <img src="./assets/0.10.2/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2018-09-11T10:32:41+01:00">2018-09-11T10:32:41+01:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2018-09-11T10:36:59+01:00">2018-09-11T10:36:59+01:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -25,15 +25,15 @@
      covered at
      <span class="covered_strength">
        <span class="green">
-         2.04
+         2.06
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
     <b>6</b> files in total.
-    <b>73</b> relevant lines. 
-    <span class="green"><b>73</b> lines covered</span> and
+    <b>76</b> relevant lines. 
+    <span class="green"><b>76</b> lines covered</span> and
     <span class="red"><b>0</b> lines missed </span>
   </div>
   <table class="file_list">
@@ -53,9 +53,9 @@
       <tr>
         <td class="strong"><a href="#3ba18f70b7b587b50e909791bf971812d88c20b5" class="src_link" title="lib/BankAccount.rb">lib/BankAccount.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>24</td>
-        <td>15</td>
-        <td>15</td>
+        <td>30</td>
+        <td>18</td>
+        <td>18</td>
         <td>0</td>
         <td>2.6</td>
       </tr>
@@ -131,8 +131,8 @@
     <h3>lib/BankAccount.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>15</b> relevant lines. 
-      <span class="green"><b>15</b> lines covered</span> and
+      <b>18</b> relevant lines. 
+      <span class="green"><b>18</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -215,7 +215,7 @@
         <li class="covered" data-hits="3" data-linenumber="13">
           <span class="hits">3</span>
           
-          <code class="ruby">    @transactions &lt;&lt; @transaction_class.new(amount, @balance, &#39;debit&#39;)</code>
+          <code class="ruby">    create_transaction(amount, &#39;debit&#39;)</code>
         </li>
       
         <li class="covered" data-hits="3" data-linenumber="14">
@@ -245,7 +245,7 @@
         <li class="covered" data-hits="2" data-linenumber="18">
           <span class="hits">2</span>
           
-          <code class="ruby">    @transactions &lt;&lt; @transaction_class.new(amount, @balance, &#39;credit&#39;)</code>
+          <code class="ruby">    create_transaction(amount, &#39;credit&#39;)</code>
         </li>
       
         <li class="covered" data-hits="2" data-linenumber="19">
@@ -279,6 +279,42 @@
         </li>
       
         <li class="never" data-hits="" data-linenumber="24">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="25">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def create_transaction(amount, type)</code>
+        </li>
+      
+        <li class="covered" data-hits="5" data-linenumber="26">
+          <span class="hits">5</span>
+          
+          <code class="ruby">    @transactions &lt;&lt; @transaction_class.new(amount, @balance, type)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="27">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="28">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="29">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  private :create_transaction</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="30">
           
           
           <code class="ruby">end</code>

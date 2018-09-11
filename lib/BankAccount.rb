@@ -10,15 +10,21 @@ class BankAccount
   end
 
   def deposit(amount)
-    @transactions << @transaction_class.new(amount, @balance, 'debit')
+    create_transaction(amount, 'debit')
     @balance += amount
   end
 
   def withdraw(amount)
-    @transactions << @transaction_class.new(amount, @balance, 'credit')
+    create_transaction(amount, 'credit')
     @balance -= amount
   end
 
   def print_statement
   end
+
+  def create_transaction(amount, type)
+    @transactions << @transaction_class.new(amount, @balance, type)
+  end
+
+  private :create_transaction
 end
