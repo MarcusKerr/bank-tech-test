@@ -1,7 +1,7 @@
 require 'Transaction'
 
 describe Transaction do
-  let(:transaction) { Transaction.new(10, 20, 'debit') }
+  let(:transaction) { Transaction.new(10, 20, 1) }
 
   describe 'initialize' do
     it 'takes 3 arguments' do
@@ -29,7 +29,13 @@ describe Transaction do
 
   describe '#type' do
     it 'returns the type the transaction was given when created' do
-      expect(transaction.type).to eq 'debit'
+      expect(transaction.type).to eq 1
     end
   end
+
+  describe '#create' do
+    it 'instantiates a transaction' do
+      expect(Transaction.create(100, 0, 1)).to be_an_instance_of(Transaction)
+    end
+  end 
 end

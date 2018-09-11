@@ -1,11 +1,12 @@
 require_relative 'Transaction'
 require_relative 'Statement'
 class BankAccount
-  attr_reader :balance, :transactions
+  attr_reader :balance, :transactions, :overdraft_limit
 
-  def initialize
+  def initialize(overdraft_limit = 1500)
     @balance = 0
     @transactions = []
+    @overdraft_limit = -overdraft_limit
   end
 
   def deposit(amount)
@@ -14,6 +15,7 @@ class BankAccount
   end
 
   def withdraw(amount)
+    fail 'Cannot exceed overdraft limit' if @balance - amount < @overdraft_limit
     create_transaction(amount, 1)
     @balance -= amount
   end
@@ -23,7 +25,7 @@ class BankAccount
   end
 
   def create_transaction(amount, type = nil, transaction_class = Transaction)
-    @transactions << transaction_class.new(amount, @balance, type)
+    @transactions << transaction_class.create(amount, @balance, type)
   end
 
   private :create_transaction

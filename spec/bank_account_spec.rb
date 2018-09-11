@@ -16,6 +16,15 @@ describe BankAccount do
     it 'intializes with no transactions' do
       expect(bank_account.transactions).to be_empty
     end
+
+    it 'overdraft limit defaults to -1500' do
+      expect(bank_account.overdraft_limit).to eq -1500
+    end
+
+    it 'can pass custom overdraft limit' do
+      monzo = BankAccount.new(2900)
+      expect(monzo.overdraft_limit).to eq -2900
+    end
   end
 
   describe '#deposit' do
@@ -30,10 +39,6 @@ describe BankAccount do
   end
 
    describe '#withdraw' do
-  #   it 'does not allow you to withdraw into minus' do
-  #     # forget this, bank accounts can go minus
-  #     # I live in minus
-  #   end
     
     it 'reduces the balance by given amount' do
       bank_account.deposit(deposit_amount)
@@ -43,6 +48,10 @@ describe BankAccount do
     it 'adds a transaction to the transaction array' do
       bank_account.withdraw(withdraw_amount)
       expect(bank_account.transactions).to_not be_empty
+    end
+
+    it 'does not allow you to withdraw past overdraft limit' do
+      expect{ bank_account.withdraw(1501) }.to raise_error("Cannot exceed overdraft limit")
     end
   end
 

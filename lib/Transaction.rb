@@ -8,4 +8,8 @@ class Transaction
     @balance = new_balance
     @type = trans_type
   end
+
+  def self.create(amount, balance, type)
+    Transaction.new(amount, balance, type)
+  end
 end

@@ -67,6 +67,8 @@ I would like to view my balance
 ```
 
 ##  Objects and messages diagram
+
+1. initial diagram
 Objects  | Messages
 ------------- | -------------
 Client  |
@@ -74,9 +76,67 @@ BankAccount  | deposit(amount), withdraw(amount), print_statement, balance
 
 
 ##  Communication diagram
+
+1. initial diagram
+
 ```
 BankAccount <-- deposit(amount) --> balance += amount 
 BankAccount <-- withdraw(amount) --> balance -= amount
 BankAccount <-- print_statement --> transactions
 Bankaccount <-- balance --> balance
+```
+
+## Usage 
+
+After clonding this project, fire up the console and navigate to the projects directory.
+Next you will need to start IRB and require the `BankAccount.rb` file.
+
+```
+irb
+require './lib/BankAccount.rb'
+```
+
+Now we will want to make instantiate a bank account so we can track our moneis!
+```
+monzo = BankAccount.new
+```
+
+Once you have a bank account, feel free to depsoit and withdraw, go crazy! Both deposit and withdraw take an integer as an argument.
+```
+monzo.deposit(100)
+monzo.withdraw(50)
+```
+you can withdraw funds past zero and go minus, however there is a defult overdraft limit of 1500. 
+
+When you're ready to see how much you spent on the weekend, go ahead and print your statement.
+```
+monzo.print_statement
+```
+Thats it, 
+Go nuts!
+
+
+##Edge cases
+####Going minus
+I decided to allow the user to make a withdrawal, this is because I felt this would make a more realistic system, I live in minus!
+I have set an overdraft limit thought (they cant just continue to go minus, that would be ridiculous). By default the overdraft limit is 1500. this can be overridden by passing an integer as an argument when instantiating a Bank Account.
+
+```
+starling = BankAccount.new(3000)
+```
+
+##My approach
+I stuck to TDD, feature testing in irb and passing those feature tests by writing a unit test in rspec. I encountered some difficulty when I came to writing the `print_statemnt` method as it relied on Transactions, it was at this point I began creating doubles and implemented a few units simultaneously.
+
+##Feature tests
+```
+require './lib/BankAccount.rb'
+monzo = BankAccount.new
+monzo.withdraw(1501)
+monzo.deposit(105.00)
+monzo.balance
+monzo.withdraw(105.00)
+monzo.balance
+monzo.deposit(200.00)
+monzo.print_statement
 ```
