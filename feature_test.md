@@ -1,8 +1,8 @@
-require './lib/bankAccount'
+require './lib/BankAccount'
 monzo = BankAccount.new
-monzo.deposit(105.50)
+monzo.deposit(105.00)
 monzo.balance
-monzo.withdraw(0.50)
+monzo.withdraw(105.00)
 monzo.balance
-monzo.deposit(0.84)
+monzo.deposit(200.00)
 monzo.print_statement
