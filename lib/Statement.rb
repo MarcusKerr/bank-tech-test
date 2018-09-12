@@ -10,6 +10,8 @@ class Statement
     end
   end
 
+  private
+
   def self.is_credit?(transaction)
     true if transaction.type
   end

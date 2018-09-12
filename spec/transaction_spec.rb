@@ -37,5 +37,5 @@ describe Transaction do
     it 'instantiates a transaction' do
       expect(Transaction.create(100, 0, 1)).to be_an_instance_of(Transaction)
     end
-  end 
+  end
 end
