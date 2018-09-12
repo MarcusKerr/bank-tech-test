@@ -3,11 +3,12 @@ describe BankAccount do
   let(:bank_account) { subject }
   let(:deposit_amount) { 50 }
   let(:withdraw_amount) { 25.50 }
+  let(:withdraw_amount) { 25.50 }
 
   let(:transaction_class) { double :transaction_class, new: transaction }
   let(:transaction) { double :transaction_instance }
   let(:transactions_array) { [transaction] }
-  let(:statement_class) { double :statement_class }
+  let(:statement_class) { double :statement_class, print: 'a string' }
 
   describe 'initialize' do
     it 'initializes with an 0 balance' do
@@ -57,7 +58,8 @@ describe BankAccount do
 
   describe '#print_statement' do
     it 'delagates to the Statement object' do
-      expect(statement_class).to receive(:print).with(10).arguments
+      expect(statement_class).to receive(:print)
+      bank_account.print_statement(statement_class)
     end
   end
 end
