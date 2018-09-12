@@ -11,10 +11,6 @@ describe BankAccount do
   let(:statement_class) { double :statement_class, print: 'a string' }
 
   describe 'initialize' do
-    it 'initializes with an 0 balance' do
-      expect(bank_account.balance).to eq 0
-    end
-
     it 'can pass custom overdraft limit' do
       monzo = BankAccount.new(2900)
       monzo.withdraw(2900)
