@@ -26,11 +26,6 @@ describe BankAccount do
     it 'increases balance by deposited amount' do
       expect { bank_account.deposit(deposit_amount) }.to change { bank_account.balance }.by deposit_amount
     end
-
-    # it 'adds a transaction to the transaction array' do
-    #   bank_account.deposit(deposit_amount)
-    #   expect(bank_account.transactions).to_not be_empty
-    # end
   end
 
   describe '#withdraw' do
@@ -38,11 +33,6 @@ describe BankAccount do
       bank_account.deposit(deposit_amount)
       expect { bank_account.withdraw(withdraw_amount) }.to change { bank_account.balance }.by -withdraw_amount
     end
-
-    # it 'adds a transaction to the transaction array' do
-    #   bank_account.withdraw(withdraw_amount)
-    #   expect(bank_account.transactions).to_not be_empty
-    # end
 
     it 'does not allow you to withdraw past overdraft limit' do
       expect { bank_account.withdraw(1501) }.to raise_error('Cannot exceed overdraft limit')
