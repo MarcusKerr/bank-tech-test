@@ -4,7 +4,7 @@
       "/Users/marcus/Projects/Makers Academy/Week10/bank-tech-test/spec/bank_account_spec.rb": [
         1,
         1,
-        7,
+        6,
         4,
         1,
         2,
@@ -63,7 +63,7 @@
         1,
         1,
         1,
-        1,
+        null,
         null,
         null,
         null
@@ -75,9 +75,9 @@
         1,
         null,
         1,
-        13,
-        13,
-        13,
+        12,
+        12,
+        12,
         null,
         null,
         1,
@@ -92,7 +92,7 @@
         null,
         null,
         1,
-        2,
+        1,
         null,
         null,
         1,
@@ -243,6 +243,6 @@
         null
       ]
     },
-    "timestamp": 1536745404
+    "timestamp": 1536745723
   }
 }

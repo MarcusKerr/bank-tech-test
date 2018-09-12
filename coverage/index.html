@@ -14,7 +14,7 @@
       <img src="./assets/0.10.2/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2018-09-12T10:43:24+01:00">2018-09-12T10:43:24+01:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2018-09-12T10:48:43+01:00">2018-09-12T10:48:43+01:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -25,15 +25,15 @@
      covered at
      <span class="covered_strength">
        <span class="green">
-         2.26
+         2.23
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
     <b>9</b> files in total.
-    <b>125</b> relevant lines. 
-    <span class="green"><b>125</b> lines covered</span> and
+    <b>124</b> relevant lines. 
+    <span class="green"><b>124</b> lines covered</span> and
     <span class="red"><b>0</b> lines missed </span>
   </div>
   <table class="file_list">
@@ -57,7 +57,7 @@
         <td>20</td>
         <td>20</td>
         <td>0</td>
-        <td>4.0</td>
+        <td>3.8</td>
       </tr>
       
       <tr>
@@ -84,8 +84,8 @@
         <td class="strong"><a href="#0f0d7bd6eeef70941357f4f0f177e0b9dfed66e6" class="src_link" title="spec/bank_account_spec.rb">spec/bank_account_spec.rb</a></td>
         <td class="green strong">100.0 %</td>
         <td>65</td>
-        <td>34</td>
-        <td>34</td>
+        <td>33</td>
+        <td>33</td>
         <td>0</td>
         <td>1.5</td>
       </tr>
@@ -206,20 +206,20 @@
           <code class="ruby">  def initialize(overdraft_limit = 1500)</code>
         </li>
       
-        <li class="covered" data-hits="13" data-linenumber="7">
-          <span class="hits">13</span>
+        <li class="covered" data-hits="12" data-linenumber="7">
+          <span class="hits">12</span>
           
           <code class="ruby">    @balance = 0</code>
         </li>
       
-        <li class="covered" data-hits="13" data-linenumber="8">
-          <span class="hits">13</span>
+        <li class="covered" data-hits="12" data-linenumber="8">
+          <span class="hits">12</span>
           
           <code class="ruby">    @transactions = []</code>
         </li>
       
-        <li class="covered" data-hits="13" data-linenumber="9">
-          <span class="hits">13</span>
+        <li class="covered" data-hits="12" data-linenumber="9">
+          <span class="hits">12</span>
           
           <code class="ruby">    @overdraft_limit = -overdraft_limit</code>
         </li>
@@ -308,8 +308,8 @@
           <code class="ruby">  def print_statement(statement_class = Statement)</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="24">
-          <span class="hits">2</span>
+        <li class="covered" data-hits="1" data-linenumber="24">
+          <span class="hits">1</span>
           
           <code class="ruby">    statement_class.print(@transactions)</code>
         </li>
@@ -608,8 +608,8 @@
     <h3>spec/bank_account_spec.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>34</b> relevant lines. 
-      <span class="green"><b>34</b> lines covered</span> and
+      <b>33</b> relevant lines. 
+      <span class="green"><b>33</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -629,8 +629,8 @@
           <code class="ruby">describe BankAccount do</code>
         </li>
       
-        <li class="covered" data-hits="7" data-linenumber="3">
-          <span class="hits">7</span>
+        <li class="covered" data-hits="6" data-linenumber="3">
+          <span class="hits">6</span>
           
           <code class="ruby">  let(:bank_account) { subject }</code>
         </li>
@@ -983,10 +983,10 @@
           <code class="ruby">      expect(statement_class).to receive(:print)</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="62">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="62">
           
-          <code class="ruby">      bank_account.print_statement(statement_class)</code>
+          
+          <code class="ruby">    </code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="63">
