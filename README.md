@@ -11,7 +11,13 @@ You'll work alone, and you'll also review your own code so you can practice refl
 
 ## How to use 
 
-After clonding this project, fire up the console and navigate to the projects directory.
+After clonding this project, fire up the console and navigate to the project's directory.
+Once you're there run `bundle install` to install the necessary gems.
+
+```
+bundle install
+```
+
 Next you will need to start IRB and require the `BankAccount.rb` file.
 
 ```
