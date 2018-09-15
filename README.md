@@ -14,7 +14,7 @@ You'll work alone, and you'll also review your own code so you can practice refl
 After clonding this project, fire up the console and navigate to the project's directory.
 Once you're there run `bundle install` to install the necessary gems.
 
-```
+``` terminal
 bundle install
 ```
 
@@ -26,7 +26,7 @@ require './lib/BankAccount.rb'
 ```
 
 Now we will want to make instantiate a bank account so we can track our moneis!
-```
+``` 
 monzo = BankAccount.new
 ```
 
