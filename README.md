@@ -14,32 +14,34 @@ You'll work alone, and you'll also review your own code so you can practice refl
 After clonding this project, fire up the console and navigate to the project's directory.
 Once you're there run `bundle install` to install the necessary gems.
 
-``` terminal
-bundle install
+``` 
+$ git clone 
+$ cd path/to/bank/repo
+$ bundle install
 ```
 
 Next you will need to start IRB and require the `BankAccount.rb` file.
 
 ```
-irb
-require './lib/BankAccount.rb'
+$ irb
+> require './lib/BankAccount.rb'
 ```
 
 Now we will want to make instantiate a bank account so we can track our moneis!
 ``` 
-monzo = BankAccount.new
+> monzo = BankAccount.new
 ```
 
 Once you have a bank account, feel free to depsoit and withdraw, go crazy! Both deposit and withdraw take an integer as an argument.
 ```
-monzo.deposit(100)
-monzo.withdraw(50)
+> monzo.deposit(100)
+> monzo.withdraw(50)
 ```
 you can withdraw funds past zero and go minus, however there is a defult overdraft limit of 1500. 
 
 When you're ready to see how much you spent on the weekend, go ahead and print your statement.
 ```
-monzo.print_statement
+> monzo.print_statement
 ```
 Thats it, 
 Go nuts!
@@ -76,26 +78,23 @@ from the acceptance critera I devises some user stories:
 ```
 As a client
 So that I can accumulate my wealth in a single place
-I would like to open a bank account
+I would like to open a bank account.
+
+As a client
+So I can check on my wealth
+I would like to view my balance.
 
 As a client
 So I can add to my wealth
-I would like to make deposits to my account
+I would like to make deposits to my account.
 
 As a client
 So I can splurge
-I would like to make witrhdrawals from my account
+I would like to make witrhdrawals from my account.
 
 As a client
 So I can keep track of my wealth
 I would like to print my bank statement and see my transactions.
-```
-
-## Additional user stories
-```
-As a client
-So I can check on my wealth
-I would like to view my balance
 ```
 
 ##  Objects and messages diagram
@@ -122,7 +121,7 @@ I decided to allow the user to make a withdrawal, this is because I felt this wo
 I have set an overdraft limit thought (they cant just continue to go minus, that would be ridiculous). By default the overdraft limit is 1500. this can be overridden by passing an integer as an argument when instantiating a Bank Account.
 
 ```
-starling = BankAccount.new(3000)
+> starling = BankAccount.new(3000)
 ```
 
 ## My approach
