@@ -15,7 +15,7 @@ After clonding this project, fire up the console and navigate to the project's d
 Once you're there run `bundle install` to install the necessary gems.
 
 ``` 
-$ git clone 
+$ git clone https://github.com/MarcusKerr/bank-tech-test.git
 $ cd path/to/bank/repo
 $ bundle install
 ```
