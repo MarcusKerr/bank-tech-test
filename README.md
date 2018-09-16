@@ -2,6 +2,9 @@
 ### Week 10 - tech test!
 Working solo to solve a challenging technical problem by writing well crafted code.
 
+![bank](https://user-images.githubusercontent.com/15127871/45598428-f8e81f00-b9d3-11e8-8209-8f01a1b39b1d.jpg)
+
+
 ## Goals
 * I write code others can easily understand
 * I can build with objects
