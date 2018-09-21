@@ -17,7 +17,7 @@ Once you're there run `bundle install` to install the necessary gems.
 
 ``` 
 $ git clone https://github.com/MarcusKerr/bank-tech-test.git
-$ cd path/to/repo
+$ cd bank-tech-test
 $ bundle install
 ```
 
